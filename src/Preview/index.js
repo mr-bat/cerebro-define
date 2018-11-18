@@ -8,13 +8,13 @@ export default class Preview extends React.Component {
     const word = this.props.word;
     return (
       <div className={styles.preview} id={word.id}>
-        <h1 className={styles.header}>{word.headword} </h1>
+        <h1 className={styles.header}>{word.title} </h1>
         {word.pronunciations &&
-            <Pronunciation pronunciations={word.pronunciations} lang={'en_US'} />
+            <Pronunciation pronunciations={word.pronunciation} lang={'en_US'} />
         }
         {word.senses &&
-            <Definition senses={word.senses} part_of_speech={word.part_of_speech} />
+            <Definition senses={word.senses} part_of_speech={word.subtitle} />
         }
       </div>);
-  } 
+  }
 };
